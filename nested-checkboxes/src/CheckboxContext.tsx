@@ -1,28 +1,6 @@
 import React, { createContext, useReducer, useContext } from "react";
-type OptionId = number;
-type OptionIdString = string;
-type CheckboxState = {
-  options: Array<OptionId>;
-  checkedOptions: Array<OptionId>;
-  isAllOptionsSelected: boolean;
-};
-export enum checkboxActionTypes {
-  LOAD_OPTIONS,
-  OPTION_TOGGLED,
-  ALL_OPTIONS_TOGGLED,
-}
-type CheckboxAction =
-  | {
-      type: checkboxActionTypes.LOAD_OPTIONS;
-      payload: Array<OptionIdString>;
-    }
-  | { type: checkboxActionTypes.OPTION_TOGGLED; payload: OptionIdString }
-  | { type: checkboxActionTypes.ALL_OPTIONS_TOGGLED; payload: OptionIdString };
-const initialState: CheckboxState = {
-  options: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-  checkedOptions: [],
-  isAllOptionsSelected: false,
-};
+import { CheckboxAction, checkboxActionTypes, CheckboxState, initialState } from "./Checkboxtypes";
+
 export const CheckboxContext = createContext<CheckboxState>(initialState);
 export const CheckboxDispatchContext = createContext<
   React.Dispatch<CheckboxAction>

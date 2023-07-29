@@ -1,4 +1,5 @@
-import { checkboxActionTypes, useCheckbox, useCheckboxDispatch } from "./CheckboxContext";
+import { useCheckbox, useCheckboxDispatch } from "./CheckboxContext";
+import { checkboxActionTypes } from "./Checkboxtypes";
 
 export const CheckBoxUI = () => {
   const selectAllOptionValue = "selectAll";
