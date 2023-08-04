@@ -3,9 +3,8 @@ export type FileType = {
   url: string;
 };
 export type FolderListProps = {
-  folder: NestedFolderListArray | [];
+  folder: Array<FolderListProps> | [];
   file: Array<FileType> | [];
   folderName: string;
 };
-interface NestedFolderListArray extends Array<FolderListProps> {}
 export type PartialFolderListProps = Partial<Array<FolderListProps>>
