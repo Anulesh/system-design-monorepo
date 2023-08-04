@@ -23,7 +23,7 @@ const updateItem = (
   return element;
 };
 const DB_SIZE = 1000;
-const root: HTMLDivElement = document.getElementById("app") as HTMLDivElement;
+const root: HTMLDivElement = document.getElementById("`app") as HTMLDivElement;
 const DB = db(DB_SIZE, DB_SIZE, getFeedItem);
 const feed = new VirtualListComponent<FeedItem>(root, {
   templateFn,

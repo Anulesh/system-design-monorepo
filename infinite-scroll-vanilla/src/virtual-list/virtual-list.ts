@@ -98,4 +98,6 @@ export class VirtualListComponent<T> extends Component<Props<T>, State> {
   getComponentId(): string {
     return "feed";
   }
+  #genList = (items: T[]) => items.map(this.props.templateFn).join("").trim();
+
 }
